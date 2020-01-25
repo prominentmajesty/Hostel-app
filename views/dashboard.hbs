@@ -1,0 +1,93 @@
+<header>
+    <nav>
+        <div class="nav-wrapper container">
+            <a id="logoLink" href="/students/dahsboard/{{id}}" class="brand-logo"><i class="mdi mdi-sofa mdi-48px left"></i>Accomify</a>
+            <a href="#" data-target="nav-mobile" class="sidenav-trigger"><i class="mdi mdi-menu"></i></a>
+            <ul class="right hide-on-med-and-down">
+                <li><a href="/"><i class="mdi mdi-home left"></i>Home</a></li>
+                <li class="active"><a href=""></a><i class="mdi mdi-view-dashboard right"></i>My Dashboard</a></li>
+                <li><a href="/students/logout"><i class="mdi mdi-logout-variant right"></i>Logout</a></li>
+            </ul>
+        </div>
+    </nav>
+    <ul class="sidenav" id="nav-mobile">
+        <li><a href="/"><i class="mdi mdi-home"></i>Home</a></li>
+        <li class="active"><a href="/students/dahsboard/{{id}}"><i class="mdi mdi-view-dashboard"></i>My Dashboard</a></li>
+        <li><a href="/students/logout"><i class="mdi mdi-logout-variant"></i>Logout</a></li>
+    </ul>
+</header>
+
+<main>
+    <section>
+    <!-- Modal Structure -->
+        <div id="profileModal" class="modal modal-fixed-footer">
+            <div class="modal-content">
+                <h4 class="center teal-text"><i class="mdi mdi-account mdi-48px left" style="color: #c5c5c5"></i>Student Profile</h4>
+                <p>View and edit your information here. Some values must stay the same after registration</p>
+            <div class="input-field">
+                <input type="text" name="name" id="name" value="{{student.firstName}} {{student.lastName}}" autofocus>
+                <label for="name">Student Name</label>
+            </div>
+            <div class="input-field">
+                <input type="email" name="email" id="email" value="{{student.email}}" class="validate">
+                <label for="email">Email</label>
+                <span class="helper-text" data-error="Please provide a valid email address. e.g. dominic@example.com" data-success=""></span>
+            </div>
+            <div class="input-field">
+                <input type="text" name="phone" id="phone" value="{{student.phone}}" class="validate">
+                <label for="phone">Phone</label>
+                <span class="helper-text" data-error="Please provide a valid phone number e.g. 08012345678" data-success=""></span>
+            </div>
+            <div class="input-field">
+                <input type="text" name="regNo" id="regNo" value="{{student.regNo}}" class="validate">
+                <label for="reNo">Registration Number</label>
+            </div>
+            <div class="input-field">
+                <input type="text" name="department" id="department" value="{{student.department}}" class="validate">
+                <label for="department">Department</label>
+            </div>
+            <div class="input-field">
+                <input type="text" class="validate" name="hostel" id="hostel" value="{{student.room}}">
+                <label for="hostel">Hostel</label>
+            </div>
+            <div class="input-field">
+                <input type="text" class="validate" name="gender" id="gender" value="{{student.gender}}">
+                <label for="gender">Gender</label>
+            </div>
+            <div class="input-field">
+                <input type="password" class="validate" name="password" id="password">
+                <label for="password">Password</label>
+                <span class="helper-text" data-error="Please provide a valid password" data-success="">Password should be at least 8 characters long</span>
+            </div>
+        </div>
+        <div class="modal-footer center-align">
+            <button id="editButton" class="btn blue darken-2 waves-effect waves-light"><i class="mdi mdi-pencil left"></i>Edit</button>
+            <button id="saveButton" class="btn green darken-2 waves-effect waves-light" data-id="{{student._id}}"><i class="mdi mdi-check left"></i>Save</button>
+            <button class="btn red darken-2 waves-effect waves-light modal-close"><i class="mdi mdi-close left"></i>Close</button>
+        </div>
+    </div>
+
+        <div class="container">
+            <h6>Welcome {{name}}</h6>
+            <div class="row">
+                <div class="col l6 s12">
+                    <div class="links">
+                        <i class="mdi mdi-bed-empty main-icons"></i>
+                        <h5><a href="/students/bedspace/{{id}}">Apply for Bedspace</a></h5>
+                    </div>
+                </div>
+                <div class="col l6 s12">
+                    <div class="links">
+                        <i class="mdi mdi-account main-icons"></i>
+                        <h5><a class="modal-trigger" href="#profileModal">My Profile</a></h5>
+                    </div>
+                </div>
+            </div>
+            <hr style="margin-top: 50px;">
+        </div>
+    </section>
+</main>
+
+<footer class="center bg-dark">
+    <p>&copy; Copyright Hostel Application 2018</p>
+</footer>

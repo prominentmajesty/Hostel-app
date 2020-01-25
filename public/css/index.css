@@ -1,0 +1,150 @@
+body {
+    background: rgba(0, 0, 0, 0.9);
+    margin: 0;
+    color: #ffffff;
+    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+}
+
+#adminLoginModal {
+    width: 50%;
+}
+
+h4, .prefix {
+    color: #444;
+}
+
+.showcase::after {
+    content: '';
+    height: 100vh;
+    width: 100%;
+    background-image: url(/img/background.jpg);
+    background-size: cover;
+    background-repeat: no-repeat;
+    background-position: center;
+    display: block;
+    filter: blur(0px);
+    -webkit-filter: blur(0px);
+    transition: all 1s;
+}
+
+.showcase:hover::after {
+    filter: blur(5px);
+    -webkit-filter: blur(5px);
+}
+
+#adminDiv {
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    z-index: 99;
+    background-color: #26a69a;
+    padding: 10px;
+    border-radius: 3px;
+    box-shadow: 1px 1px 1px gray;
+}
+
+#adminDiv:hover {
+    background-color: #43bbb0;
+}
+
+#adminDiv a {
+    color: #fff;
+}
+
+#adminDiv a:active {
+    color: #f00;
+}
+
+.content {
+    position: absolute;
+    z-index: 1;
+    top: 10%;
+    left: 50%;
+    margin-top: 105px;
+    margin-left: -145px;
+    width: 300px;
+    height: 350px;
+    text-align: center;
+    transition: all 1s;
+}
+
+.logo {
+    max-width: 200px;
+    max-height: 200px;
+    background: whitesmoke;
+}
+
+.content .logo {
+    height: 180px;
+    width: 180px;
+}
+
+.content .title {
+    font-size: 2.2rem;
+    margin-top: 1rem;
+}
+
+.content .text {
+    line-height: 1.7;
+    margin-top: 1rem;
+}
+
+.container {
+    max-width: 960px;
+    margin: auto;
+    overflow: hidden;
+    padding: 4rem 1rem;
+}
+
+.icons {
+    color: #26a69a;
+}
+
+.grid-3 {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
+}
+
+.grid-2 {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-gap: 20px;
+}
+
+#about {
+    color: #26a69a;
+}
+
+/* Small Screens */
+@media (max-width: 560px) {
+    .showcase::after {
+        height: 50vh;
+    }
+
+    .content {
+        top: 0%;
+        margin-top: 0px;
+    }
+
+    .content .logo {
+        height: 140px;
+        width: 140px;
+        color: #fff;
+    }
+
+    .grid-3, .grid-2 {
+        grid-template-columns: 1fr;
+    }
+
+    .services div {
+        border-bottom: 1px dashed #333;
+    }
+}
+
+/* Landscape */
+@media (max-height: 500px) {
+    .content {
+        top: 0%;
+    }
+}
