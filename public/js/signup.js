@@ -39,7 +39,7 @@ $(document).ready(function () {
 
     function submitForm (event) {        
         for (var i = 0; i < inputs.length; i++) {
-            if (isEmpty(inputs[i])) {
+            if (isEmpty(inputs[i])){
                 event.preventDefault();
                 inputs[i].classList.add('invalid');
                 inputs[i].focus();

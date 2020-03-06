@@ -13,8 +13,7 @@
     "JavaScript"
   ],
   "engines": {
-    "node": "^8.7.0",
-    "npm": "^5.4.2"
+    "node": "^11.8.0"
   },
   "author": "Uzoanya Dominic",
   "license": "ISC",
